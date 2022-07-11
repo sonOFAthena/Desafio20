@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+main {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.container-profile {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-profile__image {
+  display: flex;
+  align-items: center;
+}
+
+.container-profile__image img {
+  border-radius: 50%;
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+}
+
+.container-profile__info {
+  margin-left: 5px;
+}
+.container-profile__info__name {
+  margin-bottom: 5px;
+}
+
+.container-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  width: 100%;
+  max-width: 650px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.container-section--button {
+  background-color: blue;
+  color: aliceblue;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  max-height: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+}
+
+@media screen and (max-width: 410px) {
+  .container-logo__name {
+    width: 70px;
+  }
+  .container-logo__image {
+    width: 40px;
+  }
+
+  .container-profile__image img {
+    width: 40px;
+  }
+
+  .container-profile__info {
+    font-size: 13px;
+  }
+
+  .container-section--button {
+    height: 150px;
+    width: 200px;
+  }
+}
